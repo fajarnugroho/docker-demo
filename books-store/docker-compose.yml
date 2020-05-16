@@ -1,0 +1,25 @@
+version: '3.3'
+services:
+  bookstore:
+    image: bookstore:1.0
+    build:
+      context: ./
+    ports:
+      - 5000:5000
+    environment:
+      DATABASE_URL: "postgresql://bookstore:kopinyamangabikinkembung@postgres:5432/bookstore"
+      APP_SETTINGS: "config.ProductionConfig"
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres:11
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: bookstore
+      POSTGRES_USER: bookstore
+      POSTGRES_PASSWORD: kopinyamangabikinkembung
+
+volumes:
+  postgres_data:
+    driver: local

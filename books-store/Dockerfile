@@ -9,4 +9,4 @@ RUN pip install -r requirements.txt && rm -rf /root/.cache
 COPY . /app
 
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]
-CMD ["python", "manage.py", "runserver"]
+CMD ["/app/start.sh"]
