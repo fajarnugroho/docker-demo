@@ -1,17 +1,21 @@
-Example 1
-=========
+# Simple Dockerfile build
 
-This example shows a simple Flask application.
+## Credit
+[miguelgrinberg/flask-examples](https://github.com/miguelgrinberg/flask-examples)
 
-Running the application
------------------------
 
-To run this example follow these steps:
+## How to run
 
-- Activate a virtual environment that contains the packages in `../requirements.txt`
-- To start the application run the following command:
+1. build image
 
-        (venv) $ python hello.py
+```sh
+$ docker build -t helloworld .
+```
 
-- Works fine with both Windows and Linux OS.
+2. run image
 
+```sh
+$ docker run -p 5000:5000 helloworld
+```
+
+3. open localhost:5000 in browser
