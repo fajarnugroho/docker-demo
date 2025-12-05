@@ -6,6 +6,6 @@ require (
 	github.com/gorilla/handlers v1.4.2
 	github.com/gorilla/mux v1.7.4
 	github.com/imdario/mergo v0.3.9
-	github.com/sirupsen/logrus v1.5.0
+	github.com/sirupsen/logrus v1.8.3
 	gopkg.in/yaml.v2 v2.2.8
 )
